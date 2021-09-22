@@ -1,0 +1,30 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        int T=sc.nextInt();
+        
+        for(int j=0; j < T; j++){
+            String str = sc.next();
+            int count1=0;
+            int count0=0;
+            char[] s = str.toCharArray();
+            
+            for(int i=0; i < s.length; i++){
+                if(s[i] == '1')
+                    count1++;
+                else if(s[i] == '0')
+                    count0++;
+            }
+            
+            if(count1 > count0)
+                System.out.println(count0);
+            else
+                System.out.println(count1);
+        }
+    }
+}
